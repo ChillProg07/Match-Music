@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #1d1d1f;
+    background:
+        linear-gradient(
+            135deg,
+            #fff4fa,
+            #f1eeff,
+            #edf7ff
+        );
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.container {
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 64px 0;
+}
+
+.hero {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.label {
+    margin: 0 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(48px, 9vw, 82px);
+    line-height: 1;
+}
+
+.subtitle {
+    max-width: 580px;
+    margin: 20px auto 0;
+    color: #65656c;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.upload-card,
+.vibe-card {
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 20px 60px rgba(50, 40, 80, 0.12);
+    backdrop-filter: blur(16px);
+}
+
+.upload-area {
+    display: flex;
+    min-height: 220px;
+    padding: 32px;
+    cursor: pointer;
+    border: 2px dashed #b8afcf;
+    border-radius: 18px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.2s;
+}
+
+.upload-area:hover {
+    border-color: #6d55c7;
+    background: #f8f5ff;
+}
+
+.upload-icon {
+    font-size: 48px;
+}
+
+.upload-title {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.upload-hint {
+    margin-top: 8px;
+    color: #74747c;
+}
+
+.image-preview {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    margin-top: 20px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px 24px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 14px;
+    color: white;
+    background: #17131f;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+.status {
+    margin: 24px 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.results {
+    margin-top: 32px;
+}
+
+.result-label {
+    margin: 0;
+    color: #74747c;
+}
+
+.vibe-card h2 {
+    margin: 8px 0 18px;
+    font-size: 38px;
+    text-transform: capitalize;
+}
+
+.vibes-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.vibe-badge {
+    padding: 9px 13px;
+    border-radius: 999px;
+    background: #eee8ff;
+}
+
+.tracks-title {
+    margin: 36px 0 18px;
+}
+
+.tracks-list {
+    display: grid;
+    gap: 16px;
+}
+
+.track-card {
+    display: grid;
+    padding: 16px;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(50, 40, 80, 0.08);
+    grid-template-columns: 84px 1fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.track-cover {
+    width: 84px;
+    height: 84px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.track-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+.track-artist {
+    margin: 6px 0 12px;
+    color: #6c6c73;
+}
+
+.track-link {
+    display: inline-block;
+    color: #5d42c4;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 36px 0;
+    }
+
+    .track-card {
+        grid-template-columns: 64px 1fr;
+    }
+
+    .track-cover {
+        width: 64px;
+        height: 64px;
+    }
+}

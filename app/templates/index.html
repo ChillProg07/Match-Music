@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MatchMusic</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+</head>
+
+<body>
+    <main class="container">
+        <section class="hero">
+            <p class="label">AI MUSIC MATCHER</p>
+
+            <h1>MatchMusic</h1>
+
+            <p class="subtitle">
+                Завантаж фото, а AI визначить його вайб
+                і запропонує музику.
+            </p>
+        </section>
+
+        <section class="upload-card">
+            <label
+                for="imageInput"
+                class="upload-area"
+                id="uploadArea"
+            >
+                <span class="upload-icon">📷</span>
+
+                <span class="upload-title">
+                    Обери фотографію
+                </span>
+
+                <span class="upload-hint">
+                    JPEG, PNG або WEBP
+                </span>
+            </label>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/jpeg,image/png,image/webp"
+                hidden
+            >
+
+            <img
+                id="imagePreview"
+                class="image-preview hidden"
+                alt="Попередній перегляд фото"
+            >
+
+            <button
+                type="button"
+                id="analyzeButton"
+                disabled
+            >
+                Підібрати музику
+            </button>
+        </section>
+
+        <p
+            id="statusMessage"
+            class="status hidden"
+        ></p>
+
+        <section
+            id="resultsSection"
+            class="results hidden"
+        >
+            <div class="vibe-card">
+                <p class="result-label">
+                    Основний вайб
+                </p>
+
+                <h2 id="mainVibe"></h2>
+
+                <div
+                    id="vibesList"
+                    class="vibes-list"
+                ></div>
+            </div>
+
+            <div>
+                <h2 class="tracks-title">
+                    Рекомендовані пісні
+                </h2>
+
+                <div
+                    id="tracksList"
+                    class="tracks-list"
+                ></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
