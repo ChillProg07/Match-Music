@@ -6,6 +6,7 @@ const resultsSection = document.getElementById("resultsSection");
 const mainVibe = document.getElementById("mainVibe");
 const vibesList = document.getElementById("vibesList");
 const tracksList = document.getElementById("tracksList");
+const uploadArea = document.getElementById("uploadArea")
 
 console.log({
     imageInput,
@@ -24,11 +25,12 @@ imageInput.addEventListener("change", () => {
     if (!file) {
         analyzeButton.disabled = true;
         imagePreview.classList.add("hidden");
+        uploadArea.classList.remove("hidden");
         return;
     }
 
     const imageUrl = URL.createObjectURL(file);
-
+    uploadArea.classList.add("hidden");
     imagePreview.src = imageUrl;
     imagePreview.classList.remove("hidden");
     analyzeButton.disabled = false;
