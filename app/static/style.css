@@ -31,11 +31,12 @@ img {
 
 .container {
     width: 100%;
-    padding: 24px 16px 40px;
+    min-height: 100vh;
+    padding: 40px 10px;
 }
 
 .hero {
-    margin-bottom: 24px;
+    margin-bottom: 36px;
     text-align: center;
 }
 
@@ -74,8 +75,8 @@ h1 {
 .upload-area {
     display: flex;
     width: 100%;
-    min-height: 180px;
-    padding: 24px 16px;
+    min-height: 480px;
+    padding: 40px 20px;
     cursor: pointer;
     border: 2px dashed #b8afcf;
     border-radius: 16px;
@@ -87,6 +88,7 @@ h1 {
 }
 .upload-card {
     width: 100%;
+    padding: 24px;
     max-width: none;
     margin: 0 auto;
 }
